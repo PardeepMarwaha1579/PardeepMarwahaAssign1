@@ -26,6 +26,7 @@ public class CardTrick {
        for(Card newHand:magicHand){
            System.out.println(newHand.getSuit()+" "+newHand.getValue());
        }
+        /*
        Scanner scan=new Scanner(System.in);
        System.out.println("Please Select your card suit:");
        System.out.println("Please chose:"+"\n"+"Type 0 for Hearts"+"\n"+"Type 1 for Diamonds"+"\n"+"Type 2 for Spades"+"\n"+"Type 3 for Clubs");
@@ -62,13 +63,17 @@ public class CardTrick {
        Card assignCard=new Card();
        assignCard.setSuit(Card.SUITS[suitValue]);
        assignCard.setValue(cardNumber);
-       
+       */
       //Boolean to check if the card exists in random deck or not!
+       Card luckyCard=new Card();
+       luckyCard.setSuit(Card.SUITS[2]);
+       luckyCard.setValue(3);
+       System.out.println("Your Card is"+luckyCard.getValue()+" "+luckyCard.getSuit());
        boolean realCard=false;
        for (Card magicCard : magicHand) {
             // Sets flag to true if user card is found in magicHands
             System.out.println(magicCard.getValue() + " " + magicCard.getSuit());
-            if (magicCard.getValue() ==assignCard.getValue() && magicCard.getSuit().equals(assignCard.getSuit())) {
+            if (magicCard.getValue() ==luckyCard.getValue() && magicCard.getSuit().equals(luckyCard.getSuit())) {
                 realCard = true;
                 break;
             }
