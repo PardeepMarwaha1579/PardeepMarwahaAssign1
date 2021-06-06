@@ -9,6 +9,7 @@ package pardeep.marwaha.s991631579;
  * @author Pardeep Marwaha
  * @date 4 June 2021
  */
+import java.util.Scanner;
 public class CardTrick {
 
     public static void main(String[] args) {
@@ -25,6 +26,10 @@ public class CardTrick {
        for(Card newHand:magicHand){
            System.out.println(newHand.getSuit()+" "+newHand.getValue());
        }
+       Scanner scan=new Scanner(System.in);
+       System.out.println("Please Select your card suit:");
+       System.out.println("Please chose:"+"\n"+"Type 0 for Hearts"+"\n"+"Type 1 for Diamonds"+"\n"+"Type 2 for Spades"+"\n"+"Type 3 for Clubs");
+       int suitValue=scan.nextInt();
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
         }
