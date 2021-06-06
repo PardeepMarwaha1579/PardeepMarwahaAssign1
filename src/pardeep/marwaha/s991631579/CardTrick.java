@@ -17,6 +17,14 @@ public class CardTrick {
 
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
+             c.setValue(c.randomValue);
+             c.setSuit(Card.SUITS[c.randomSuit]);
+             
+       magicHand[i]=c;
+        }
+       for(Card newHand:magicHand){
+           System.out.println(newHand.getSuit()+" "+newHand.getValue());
+       }
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
         }
@@ -25,5 +33,4 @@ public class CardTrick {
         // and search magicHand here
         //Then report the result here
     }
-
-}
+        
