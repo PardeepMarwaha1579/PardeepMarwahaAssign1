@@ -57,12 +57,28 @@ public class CardTrick {
                     System.out.println("Please enter suit Number from 1-13 only!");
                     cardNumber=scan.nextInt();
        }
-       System.out.println("Your Card is:"+Card.SUITS[suitValue]+" "+cardNumber); 
+       System.out.println("Your Card is:"+cardNumber+" "+Card.SUITS[suitValue]); 
        
-            
+       Card assignCard=new Card();
+       assignCard.setSuit(Card.SUITS[suitValue]);
+       assignCard.setValue(cardNumber);
        
+      //Boolean to check if the card exists in random deck or not!
+       boolean realCard=false;
+       for (Card magicCard : magicHand) {
+            // Sets flag to true if user card is found in magicHands
+            System.out.println(magicCard.getValue() + " " + magicCard.getSuit());
+            if (magicCard.getValue() ==assignCard.getValue() && magicCard.getSuit().equals(assignCard.getSuit())) {
+                realCard = true;
+                break;
+            }
+        }
+            if (realCard) {
+                System.out.println("Congrats you are the Winner");
+            } else {
+                System.out.println("Sorry you have lost it!");
+            }
         }
 
-        
     }
         
