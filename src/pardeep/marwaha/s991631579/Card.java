@@ -12,6 +12,7 @@ package pardeep.marwaha.s991631579;
  * @author Pardeep Marwaha
  * @date 4 June 2021
  */
+import java.util.Random;
 public class Card {
 
    private String suit; //clubs, spades, diamonds, hearts
@@ -39,7 +40,17 @@ public class Card {
     public void setValue(int value) {
         this.value = value;
     }
-   
-   
     
+    /*
+    Creates a random Object to get random values of Card and suit
+    */
+ Random random=new Random();
+ int randomValue=random.nextInt(12);
+ int randomSuit=random.nextInt(3);
+ 
+  @Override
+    public String toString() {
+        return "Card suit=" + suit + "value=" + value;
+   
+    }
 }
